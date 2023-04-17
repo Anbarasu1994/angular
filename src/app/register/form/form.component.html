@@ -1,0 +1,297 @@
+<mat-stepper #stepper>
+  <mat-step>
+    <form>
+      <ng-template matStepLabel>Fill out your Details</ng-template>
+
+      <section class="vh-70" style="background-color: #eee;">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+              <div class="card text-black" style="border-radius: 25px;">
+                <div class="card-body p-md-5">
+                  <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Personal Dtails</p>
+
+                      <form class="mx-1 mx-md-4">
+
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="form3Example1c">Your Name</label>
+                            <input type="text" id="form3Example1c" [(ngModel)]="model.studentname" name="studentname"
+                              class="form-control" />
+
+                          </div>
+                        </div>
+
+
+                        <label class="gen" for="form3Example1c">Gender</label><br>
+                        <div class="radio">
+                          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="options" (change)="onItemChange($event.target)" value="male"
+                                autocomplete="off"> Male
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="options" (change)="onItemChange($event.target)"
+                                autocomplete="off" value="female"> Female
+                            </label>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="form3Example3c">Your Email</label>
+                            <input type="email" id="form3Example3c" [(ngModel)]="model.mail" name="mail"
+                              class="form-control" />
+
+                          </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="form3Example4c">Father name</label>
+                            <input type="text" id="form3Example4c" [(ngModel)]="model.fathername" name="fathername" mail
+                              class="form-control" />
+
+                          </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="form3Example4cd"> Adhar Number</label>
+                            <input type="number" id="form3Example4cd" [(ngModel)]="model.adharnumber" name="adharnumber"
+                              class="form-control" />
+
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="form3Example4cd">Date Of Birth </label>
+                            <input type="text" id="form3Example4cd" [(ngModel)]="model.dob" name="dob"
+                              class="form-control" />
+                          </div>
+                        </div>                        
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="form3Example4cd">Address</label>
+                            <input type="text" id="form3Example4cd" [(ngModel)]="model.address" name="address"
+                              class="form-control" />
+
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="form3Example4cd"> Mobile Number</label>
+                            <input type="text" id="form3Example4cd" [(ngModel)]="model.mobile" name="mobile"
+                              class="form-control" />
+
+                          </div>
+                        </div>
+
+
+
+                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+
+                          
+                          <button mat-button matStepperNext>Next</button>
+
+                        </div>
+
+                      </form>
+
+                    </div>
+                    <div
+                      class="col-md-10 col-lg-6 col-xl-7 flex-column justify-content-center d-flex align-items-center order-1 order-lg-2">
+                      <img src="../../../assets/site-logo.png">
+                      <p class="prefixs">Experice in Live...</p>
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                        class="img-fluid" alt="Sample image">
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+  </mat-step>
+
+
+  <!-- stepper-2 -->
+  <mat-step>
+    <form>
+      <ng-template matStepLabel>Education Qulification</ng-template>
+
+
+      <div>
+        <section class="vh-70" style="background-color: #eee;">
+          <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-lg-12 col-xl-11">
+                <div class="card text-black" style="border-radius: 25px;">
+                  <div class="card-body p-md-5">
+                    <div class="row justify-content-center">
+                      <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Education Details</p>
+
+                        <form class="mx-1 mx-md-4">
+
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <label class="form-label" for="form3Example1c">School name</label>
+                              <input type="text" id="form3Example1c" [(ngModel)]="model.schoolname" name="schoolname"
+                                class="form-control" />
+
+                            </div>
+                          </div>
+
+
+
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <label class="form-label" for="form3Example3c">Collage details</label>
+                              <input type="text" id="form3Example3c" [(ngModel)]="model.collage" name="collage"
+                                class="form-control" />
+                              <label class="form-label" for="form3Example3c">Degree details and year of passing</label>
+                              <input type="text" id="form3Example3c" [(ngModel)]="model.degree" name="degree"
+                                class="form-control" />
+
+                            </div>
+                          </div>
+
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <label class="form-label" for="form3Example4c">Skils</label>
+                              <input type="text" id="form3Example4c" [(ngModel)]="model.skills" name="skills"
+                                class="form-control" />
+
+                            </div>
+                          </div>
+
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <label class="form-label" for="form3Example4cd"> Date of joining</label>
+                              <input type="text" id="form3Example4cd" [(ngModel)]="model.doj" name="doj"
+                                class="form-control" />
+
+                            </div>
+                          </div>
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <label class="form-label" for="form3Example4cd">Work Exprience </label>
+                              <input type="text" id="form3Example4cd" [(ngModel)]="model.exprience" name="exprience"
+                                class="form-control" />
+
+                            </div>
+                          </div>
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <label class="form-label" for="form3Example4cd">Tecnology to learn</label>
+                              <input type="text" id="form3Example4cd" [(ngModel)]="model.tecnology" name="tecnology"
+                                class="form-control" />
+
+                            </div>
+                          </div>
+                          <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                              <label class="form-label" for="form3Example4cd"> Refered by</label>
+                              <input type="text" id="form3Example4cd" [(ngModel)]="model.reference" name="reference"
+                                class="form-control" />
+
+                            </div>
+                          </div>
+
+
+
+                          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+
+                          </div>
+
+                        </form>
+
+                      </div>
+                      <div
+                        class="col-md-10 col-lg-6 col-xl-7 flex-column justify-content-center d-flex align-items-center order-1 order-lg-2">
+                        <img src="../../../assets/site-logo.png">
+                        <p class="prefixs">Experice in Live...</p>
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                          class="img-fluid" alt="Sample image">
+
+                        <div>
+
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+
+
+    </form>
+  </mat-step>
+
+  <!-- stepper-3 -->
+  <mat-step>
+    <form>
+      <ng-template matStepLabel>Done</ng-template>
+      <div
+        class="col-md-10 col-lg-6 col-xl-7 flex-column justify-content-center d-flex align-items-center order-1 order-lg-2">
+        <img src="../../../assets/site-logo.png">
+        <p class="prefixs">Experice in Live...</p>
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid"
+          alt="Sample image">
+
+        <div>
+
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button>Register</button>
+          <button type="button" (click)="submit()" class="btn btn-primary btn-lg">Register</button>
+        </div>
+      </div>
+    </form>
+  </mat-step>
+
+</mat-stepper>
+
+<!-- <mat-form-field appearance="fill">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field> -->
+<tbody>
+
+<div *ngFor="let Register  regdata">
+
+</div>
+
+</tbody>
